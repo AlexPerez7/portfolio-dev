@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import Experience from '../components/Experience.astro';
+import SocialPill from '../components/SocialPill.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import MailIcon from '../icons/Mail.astro';
+import BriefCaseIcon from '../icons/BriefCase.astro';
+---
+
+<Layout 
+title="Portfolio Alex Pérez - Desarrollador Web"
+description='Alex Pérez, Desarrollador Web y Diseñador UI en Santiago, Chile. Especializado en diseño de interfaces, diseño web responsivo y desarrollo visual.'
+>
+	<main>
+		<SectionContainer class="py-44 pb-20">
+			<img 
+    			class="rounded-full size-12 mb-4" 
+    			src="https://images.vexels.com/content/224169/preview/computer-programming-logo-1c7995.png" 
+    			alt="alexdev photo">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, I'm Alex Pérez 
+					<a href="https://www.linkedin.com/in/alex-p%C3%A9rez-argomedo-b64b9b1b7/" 
+					target="_blank" 
+					rel="noopener" 
+					class="flex justify-center items-center"
+				>
+					<Badge>Available for work!</Badge>
+				</a>	
+			</h1>
+			<h2 class="text-2xl text-wrap"><span class="text-yellow-200/90">Web designer and developer</span> based in
+				<span class="text-red-200/90"> Santiago, Chile.</span>
+				I specialize in Ui design, responsive web design and visual development
+			</h2>
+
+			<nav class="flex gap-x-4 mt-4">
+					<SocialPill href="https://www.linkedin.com/in/alex-p%C3%A9rez-argomedo-b64b9b1b7/">
+						<LinkedInIcon class="size-6" />
+    					LinedIn
+					</SocialPill>
+					<SocialPill href="https://github.com/AlexPerez7">
+						<GitHubIcon class="size-6" />
+    					GitHub
+					</SocialPill>
+					<SocialPill href="mailto:a.perez.argomedo@gmail.com">
+						<MailIcon class="size-6" />
+    					a.perez.argomedo@gmail.com
+					</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCaseIcon class="size-6 mr-4" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+	</main>
+</Layout>
